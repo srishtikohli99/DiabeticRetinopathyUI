@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Diabetes</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- ##### Preloader ##### -->
+
+       <i class="fa fa-3x fas fa-comments" onclick="showChatBoard()" style="position:fixed;bottom:50px;right:20px;top:auto;left:auto;width:50px;height:50px;cursor:pointer;z-index:999;"> </i>
+<div class="chatboard fade d-none" style="position:fixed;bottom:20px;right:20px;top:auto;left:auto;z-index:1000;background:#fff;padding: 40px 2px 0;border-radius: 5px">
+<i class="fa fa-2x fa-times pull-right" onclick="hideChatBoard()" style="position:absolute;right:5px;top:5px;cursor:pointer;" aria-hidden="true"></i>
+<iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/1172c73f-b5e8-4382-9cbc-d2e0be5860e4"></iframe>
+</div>
+
+    <div id="preloader">
+        <i class="circle-preloader"></i>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="fitness-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                   <nav class="classy-navbar justify-content-between" id="fitnessNav">
+
+                        
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="/blind/predict/">Home</a></li>
+                                   
+                                    <li><a href="#">Diabetic Retinopathy</a>
+                                        <ul class="dropdown">
+                                            <li><a href="/blind/predict/">About</a></li>
+                                            <li><a href="/blind/form/">Test your Retina</a></li>
+                                        </ul>
+                                        
+                                    </li>
+                                    <li><a href="#">About Us</a></li>
+                                    <!-- <li><a href="">News</a></li> -->
+                                    <!-- <li><a href="contact.html">Contact</a></li> -->
+                                </ul>
+
+                                <!-- Call Button -->
+                                <a href="#" class="fitness-btn menu-btn ml-30">Call: 180030022935</a>
+
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url('{% static 'images/3.jpg' %}');">
+        <div class="bradcumbContent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Your diagnosis is as follows: </h2>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### Contact Area Start ##### -->
+    <section class="contact-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="contact-title">
+                        <h3 >{{ res }} DR </h3>
+                    </div>
+                </div>
+                {{ summ }}
+            </div>
+
+           
+        </div>
+    </section>
+    <!-- ##### Contact Area End ##### -->
+
+    <!-- ##### Google Maps ##### -->
+    <div class="map-area">
+        <iframe src="http://maps.google.com/maps?q=28.6588792, 77.2290188,z=15&output=embed";  frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/coordinates.html" allowfullscreen></iframe>
+                
+       
+
+    <!-- ##### Footer Area Start ##### -->
+    
+        <!-- Copywrite Area -->
+     
+    <!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script> 
+    <!-- Bootstrap js -->
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'js/active.js' %}"></script>
+    <!-- Live Chat Code :: Start of Tawk.to Script -->
+
+
+    <script>
+function showChatBoard(){
+$('.chatboard').removeClass('d-none').addClass('show d-block');
+}
+function hideChatBoard(){
+$('.chatboard').removeClass('show d-block').addClass('d-none');
+}
+</script>
+ 
+
+   <!--  <script>
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5b55ea72df040c3e9e0bdf85/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script> -->
+    <!-- End of Tawk.to Script -->
+</body>
+
+</html>

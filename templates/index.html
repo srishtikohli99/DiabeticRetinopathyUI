@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Diabetes</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+ 
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+    <i class="fa fa-3x fas fa-comments" onclick="showChatBoard()" style="position:fixed;bottom:50px;right:20px;top:auto;left:auto;width:50px;height:50px;cursor:pointer;z-index:999;"> </i>
+<div class="chatboard fade d-none" style="position:fixed;bottom:20px;right:20px;top:auto;left:auto;z-index:1000;background:#fff;padding: 40px 2px 0;border-radius: 5px">
+<i class="fa fa-2x fa-times pull-right" onclick="hideChatBoard()" style="position:absolute;right:5px;top:5px;cursor:pointer;" aria-hidden="true"></i>
+<iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/1172c73f-b5e8-4382-9cbc-d2e0be5860e4"></iframe>
+</div>
+
+    <!-- ##### Preloader ##### -->
+    <div id="preloader">
+        <i class="circle-preloader"></i>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="fitness-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="fitnessNav">
+
+                        
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                   
+                                    <li><a href="#">Diabetic Retinopathy</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#about">About</a></li>
+                                            <li><a href="/blind/form/">Test your Retina</a></li>
+                                        </ul>
+                                        
+                                    </li>
+                                    <li><a href="#">About Us</a></li>
+                                    <!-- <li><a href="">News</a></li> -->
+                                    <!-- <li><a href="contact.html">Contact</a></li> -->
+                                </ul>
+
+                                <!-- Call Button -->
+                                <a href="#" class="fitness-btn menu-btn ml-30">Call: 180030022935</a>
+
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Hero Area Start ##### -->
+    <section class="hero-area">
+        <div class="hero-slides owl-carousel">
+
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide bg-img"  style="background-image: url('{% static 'images/1.jpg' %}');">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12 col-lg-9">
+                            <div class="hero-slides-content">
+                                <h2 data-animation="fadeInUp" data-delay="100ms">DIABETES</h2>
+                                <p data-animation="fadeInUp" data-delay="400ms">Nearly 1 million Indians die due to diabetes every year. According to the Indian Heart Association, India is projected to be home to 109 million individuals with diabetes by 2035.</p>
+                                <a href="#" class="btn fitness-btn wel-btn" data-animation="fadeInUp" data-delay="150000ms">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide bg-img" style="background-image: url('{% static 'images/3.jpg' %}');">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12 col-lg-9">
+                            <div class="hero-slides-content">
+                                <h2 data-animation="fadeInUp" data-delay="100ms">DIABETIC RETINOPATHY</h2>
+                                <p data-animation="fadeInUp" data-delay="400ms">Diabetic retinopathy is caused by damage to the blood vessels in the tissue at the back of the eye (retina). Poorly controlled blood sugar is a risk factor.</p>
+                                <a href="#" class="btn fitness-btn wel-btn" data-animation="fadeInUp" data-delay="150000ms">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide bg-img" style="background-image: url('{% static 'images/bg-11.jpg' %}');">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12 col-lg-9">
+                            <div class="hero-slides-content">
+                                <h2 data-animation="fadeInUp" data-delay="100ms">QUIT SEDENTARY LIFESTYLE</h2>
+                                <p data-animation="fadeInUp" data-delay="400ms">Exercise to control Diabetes: At least two and a half hours of moderate to vigorous intensity physical activity per week (i.e., brisk walking, water aerobics, swimming, or jogging).</p>
+                                <a href="#" class="btn fitness-btn wel-btn" data-animation="fadeInUp" data-delay="150000ms">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Hero Area End ##### -->
+
+    <!-- ##### Fitness Adds Area Start ##### -->
+    <div class="fitness-adds-area">
+        <div class="container">
+            <div class="row">
+
+                <!-- Single Add Area -->
+                <div class="col-12 col-lg-6">
+                    <div class="single-add-area mt-100">
+                        <a href="#"><img src="img/bg-img/add1.gif" alt=""></a>
+                    </div>
+                </div>
+
+                <!-- Single Add Area -->
+                <div class="col-12 col-lg-6">
+                    <div class="single-add-area mt-100">
+                        <a href="#"><img src="img/bg-img/add2.png" alt=""></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ##### Fitness Adds Area End ##### -->
+
+    <!-- ##### About Us Area Start ##### -->
+    <div class="about-us-area section-padding-100-0" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h6>ABOUT</h6>
+                        <h2>DIABETIC RETINOPATHY</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <div class="row">
+                        <!-- About Text -->
+                        <div class="col-12 col-lg-6">
+                            <div class="about-text">
+                                <p>Diabetic retinopathy (DR) is blood vessel damage in the retina that happens as a result of diabetes.
+                                            It is one of the leading cause of blindness in India.
+                                        Symptoms include blurred vision, difficulty seeing colors, floaters, and even total loss of vision.
+                                People with diabetes should have their vision checked at least once annually to rule out DR.
+                                There are retinal surgeries that can relieve symptoms, but controlling diabetes and managing early symptoms are the most effective ways to prevent DR.</p>
+                            </div>
+                        </div>
+                        <!-- About Text -->
+                        <div class="col-12 col-lg-6">
+                            <div class="about-text">
+                                <p>India is set to emerge as the diabetic capital of the world. According to the WHO, 31.7 million people were affected by diabetes mellitus (DM) in India in the year 2000. This figure is estimated to rise to 79.4 million by 2030, the largest number in any nation in the world. Almost two-third of all Type 2 and almost all Type 1 diabetics are expected to develop diabetic retinopathy (DR) over a period of time.</p>
+                            </div>
+                        </div>
+                        <!-- About Button Group -->
+                        <div class="col-12">
+                            <div class="about-btn-group mt-50">
+                                <a href="/blind/form" class="btn fitness-btn mr-3">Check Now</a>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="about-thumb">
+                        <img src="img/bg-img/man.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### About Us Area End ##### -->
+
+    
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'js/active.js' %}"></script>
+    <!-- Live Chat Code :: Start of Tawk.to Script -->
+
+
+<script>
+function showChatBoard(){
+$('.chatboard').removeClass('d-none').addClass('show d-block');
+}
+function hideChatBoard(){
+$('.chatboard').removeClass('show d-block').addClass('d-none');
+}
+</script>
+
+   <!--  <script>
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5b55ea72df040c3e9e0bdf85/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script> -->
+    <!-- End of Tawk.to Script -->
+</body>
+
+</html>
